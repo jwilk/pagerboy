@@ -9,13 +9,13 @@ if [ $# -eq 0 ]
 then
     printf 'Usage: %s COMMAND [ARG...]\n' "${0##*/}" >&2
     exit 1
-fi  
+fi
 
 if ! command -v pipetty > /dev/null
 then
-    printf '%s requires pipetty <https://github.com/kilobyte/colorized-logs>\n' "${0##*/}" >&2 
+    printf '%s requires pipetty <https://github.com/kilobyte/colorized-logs>\n' "${0##*/}" >&2
     exit 1
-fi  
+fi
 if [ -n "${PAGER-}" ]
 then
     pager="$PAGER"
