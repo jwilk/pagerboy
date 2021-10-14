@@ -33,7 +33,7 @@ cols
 lines
 EOF
 )
-#shellcheck disable=SC2183,SC2086
+# shellcheck disable=SC2183,SC2086
 size=$(printf '%d %d' $size)
 read -r cols lines <<EOF
 $size
