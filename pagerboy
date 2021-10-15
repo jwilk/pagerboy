@@ -28,7 +28,7 @@ fi
 export LESS="r${LESS-}"
 export LV="-c ${LV-}"
 export PAGER='cat'
-size=$(tput -S <<EOF
+size=$(TERM=${TERM:-dumb} tput -S <<EOF
 cols
 lines
 EOF
