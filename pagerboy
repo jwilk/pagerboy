@@ -38,6 +38,6 @@ size=$(printf '%d %d' $size)
 read -r cols lines <<EOF
 $size
 EOF
-exec pipetty sh -c "stty cols $cols rows $lines <&1; "'exec "$@"' pagerboy-wrapper "$@" | "$pager"
+exec pipetty sh -c "stty cols $cols rows $lines <&1; "'exec "$@"' pagerboy-wrapper "$@" | sh -c "$pager"
 
 # vim:ts=4 sts=4 sw=4 et
