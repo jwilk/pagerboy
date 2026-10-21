@@ -28,13 +28,7 @@ fi
 export LESS="-R${LESS-}"
 export LV="-c ${LV-}"
 export PAGER='cat'
-size=$(TERM=${TERM:-dumb} tput -S <<EOF
-cols
-lines
-EOF
-)
-# shellcheck disable=SC2183,SC2086
-size=$(printf '%d %d' $size)
+size=$(stty size)
 read -r cols lines <<EOF
 $size
 EOF
